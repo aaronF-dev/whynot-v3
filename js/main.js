@@ -1191,6 +1191,11 @@ var swiper = new Swiper('.mil-team-slider', {
     on: {
       slideChangeTransitionEnd: function () {
         ScrollTrigger.refresh();
+
+        
       }
     }
   });
+
+  //ticker scroller
+  

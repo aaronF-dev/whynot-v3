@@ -5695,6 +5695,71 @@ footer
 .client-card {
     background: #fff;
     border-radius: 12px;
+    padding: 16px; /* more space around logo */
+    height: 120px; /* taller card */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-card img {
+    max-width: 90%;      /* allow logo to be wider */
+    max-height: 80px;    /* bigger logo */
+    object-fit: contain;
+    margin: 0 auto;      /* center horizontally */
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .client-card {
+        height: 100px;
+        padding: 12px;
+    }
+    .client-card img {
+        max-height: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .client-card {
+        height: 80px;
+        padding: 8px;
+    }
+    .client-card img {
+        max-height: 56px;
+    }
+}
+
+/* --------------------ticker----------------------*/
+
+.client-ticker-section {
+    background: #edeaea;
+    padding: 32px 0;
+    overflow: hidden;
+}
+
+.client-ticker {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.client-ticker-track {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    animation: ticker-scroll 20s linear infinite; /* Smooth and slow for many logos */
+}
+
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scroll half the track for seamless loop */
+}
+
+.client-ticker .client-card {
+    background: #fff;
+    border-radius: 12px;
     padding: 12px;
     height: 100px;
     width: 100%;
@@ -5703,21 +5768,37 @@ footer
     justify-content: center;
 }
 
-.client-card img {
+.client-ticker .client-card img {
     max-width: 100%;
     max-height: 60px;
     object-fit: contain;
 }
 
 @media (max-width: 768px) {
-    .client-card {
-        height: 56px;
-        padding: 6px;
+    .client-ticker .client-card {
+        height: 80px;
+        padding: 12px;
     }
-    .client-card img {
-        max-height: 28px;
+    .client-ticker .client-card img {
+        max-height: 64px;
     }
 }
 
-/* --------------------ticker----------------------*/
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1260px); } /* 180px * 7 cards = 1260px */
+}
 
+
+
+/* our client in clients.html */
+
+.mil-hero-1 .mil-hero-main {
+    padding-top: 20px !important;
+}
+
+@media (max-width: 768px) {
+    .mil-hero-1 .mil-hero-main {
+        padding-top: 10px !important;
+    }
+}
