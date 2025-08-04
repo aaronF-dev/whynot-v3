@@ -1443,7 +1443,7 @@ hero 1
 .mil-hero-1 .mil-hero-main .mil-hero-text .mil-word-frame .mil-s-4 img {
   -webkit-transform: rotate(-90deg);
   transform: rotate(20deg);
-  height: 130px;
+  height: 100px;
   width: auto;
 }
 .mil-hero-1 .mil-hero-main .mil-hero-text .mil-word-frame .mil-s-5 {
@@ -5693,22 +5693,22 @@ footer
 }
 
 .client-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 16px; /* more space around logo */
-    height: 120px; /* taller card */
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    height: 120px;
+    width: 100%;
 }
 
 .client-card img {
-    max-width: 90%;      /* allow logo to be wider */
-    max-height: 80px;    /* bigger logo */
-    object-fit: contain;
-    margin: 0 auto;      /* center horizontally */
     display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
 }
 
 @media (max-width: 1200px) {
@@ -5717,7 +5717,7 @@ footer
         padding: 12px;
     }
     .client-card img {
-        max-height: 64px;
+        max-height: 80px;
     }
 }
 
@@ -5727,7 +5727,7 @@ footer
         padding: 8px;
     }
     .client-card img {
-        max-height: 56px;
+        max-height: 70px;
     }
 }
 
@@ -5749,12 +5749,12 @@ footer
     display: flex;
     width: max-content;
     gap: 24px;
-    animation: ticker-scroll 20s linear infinite; /* Smooth and slow for many logos */
+    animation: ticker-scroll 20s linear infinite;
 }
 
 @keyframes ticker-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Scroll half the track for seamless loop */
+    100% { transform: translateX(-7140px); } /* 35 cards * (180px + 24px) */
 }
 
 .client-ticker .client-card {
