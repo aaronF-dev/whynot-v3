@@ -1193,27 +1193,7 @@ var swiper = new Swiper('.mil-team-slider', {
         ScrollTrigger.refresh();
 
         
-        document.addEventListener("DOMContentLoaded", function() {
-    var tickerTrack = document.querySelector('.client-ticker-track');
-    if (!tickerTrack) return;
-
-    function setTickerAnimation() {
-        var trackWidth = tickerTrack.scrollWidth;
-        // Remove previous dynamic keyframes
-        document.querySelectorAll('.dynamic-ticker-keyframes').forEach(e => e.remove());
-        // Create new keyframes
-        var styleSheet = document.createElement("style");
-        styleSheet.className = "dynamic-ticker-keyframes";
-        styleSheet.innerText =
-            "@keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-" + trackWidth + "px); } }";
-        document.head.appendChild(styleSheet);
-    }
-
-    setTickerAnimation();
-    window.addEventListener('resize', setTickerAnimation);
-});
       }
-      
     }
     
   });
